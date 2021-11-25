@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from testpine.com/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Nov 2021 10:29:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Testpine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179513545-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-179513545-1');
+</script></head>
+<body>
+    <section class="header bg-secondary">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark bd-navbar bg-secondary w-100" id="header-navbar">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/testpine-logo-white.svg" width="197" height="20" alt="Testpine Logo" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-3 pb-3" id="mainMenu">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index-2.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="navbar-spacer"></div>
+                        <!-- <a class="btn btn-primary text-nowrap" href="https://app.testpine.com" target="_blank">Go To App</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 col-sm-12">
+                    <h1>Get in touch!</h1>
+                    <p class="text-muted">You can contact us for any question</p>
+					<p class="lead mb-0">Address:</p>
+                    <p>İçerenköy Mah.Çayır Cad.Bay Plaza No:5/13 Ataşehir / İstanbul</p>					
+                    <p class="lead mb-0">Email:</p>
+                    <p><a href="mailto:hello@testpine.com">hello@testpine.com</a></p>
+                </div> 
+                <div class="col-md-6 col-sm-12">
+                    <div class="contact-form">
+					    <div id="sendmessage"></div>
+						<div id="errormessage"></div>
+                        <form id="contactForm">
+                            <div class="form-group mb-4">
+                              <label for="name">Name Surname:</label>
+                              <input type="text" class="form-control pl-2" id="name" name="name" placeholder="John Smith">
+							  <span class="invalid-feedback">Please Enter Name-Surname(It cannot be empty)</span>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="email">E-mail address:</label>
+                                <input type="email" class="form-control pl-2" id="email" name="email" placeholder="johnsmith@testpine.com">
+								<span class="invalid-feedback">Please Enter E-mail address(It cannot be empty)</span>
+                            </div>
+							<div class="form-group mb-4">
+                              <label for="subject">Category:</label>
+								<select class="form-control pl-2" name="category" id="category">
+									<option disabled selected>Please select category</option>
+									<option value="Quote Request">Quote Request</option>
+									<option value="Consultation">Consultation</option>
+									<option value="Career">Career</option>
+									<option value="Technic Support">Technic Support</option>
+								</select>
+							  <span class="invalid-feedback">Please Enter Category(It cannot be empty)</span>
+                            </div>
+                            <div class="form-group mb-4">
+                              <label for="subject">Subject:</label>
+                              <input type="text" class="form-control pl-2" id="subject" name="subject" placeholder="Enter Subject">
+							  <span class="invalid-feedback">Please Enter Subject(It cannot be empty)</span>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="message">Message:</label>
+                                <textarea type="text" row="3" class="form-control pl-2" id="message" name="message" placeholder="Your message"></textarea>
+								<span class="invalid-feedback">Please Enter message(It cannot be empty)</span>
+                            </div>
+                            <button type="button" id ="contactFormButton" class="btn btn-primary">Contact Us</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	    <footer class="text-muted">
+        <div class="container-fluid p-3 p-md-5">
+            <ul class="bd-footer-links d-flex justify-content-center">
+                <li><a href="index-2.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <p class="text-center">© Copyright Testpine 2021. All Rights Reserved.</p>
+        </div>
+    </footer>    
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		$("#contactFormButton").click(function() {
+			//$('#contactFormButton').attr('disabled','disabled')
+			if( !$.trim($('#name').val())) {
+				$('#name').addClass('is-invalid');
+				$( "#name" ).focus();
+				return false;
+			}else{
+				$('#name').removeClass('is-invalid');
+			}
+			
+			if( !$.trim($('#email').val())) {
+				$('#email').addClass('is-invalid');
+				$( "#email" ).focus();
+				return false;
+			}else{
+				$('#email').removeClass('is-invalid');
+			}
+
+			if( !$.trim($('#category').val())) {
+				$('#category').addClass('is-invalid');
+				$( "#category" ).focus();
+				return false;
+			}else{
+				$('#category').removeClass('is-invalid');
+			}
+			
+			if( !$.trim($('#subject').val())) {
+				$('#subject').addClass('is-invalid');
+				$( "#subject" ).focus();
+				return false;
+			}else{
+				$('#subject').removeClass('is-invalid');
+			}
+
+			if( !$.trim($('#message').val())) {
+				$('#message').addClass('is-invalid');
+				$( "#message" ).focus();
+				return false;
+			}else{
+				$('#message').removeClass('is-invalid');
+			}
+			
+			var formData = $("#contactForm").serialize();
+			$.ajax({
+			url: "contactclass/process.php",
+			type: "POST",
+			data: formData,
+			success: function(msg) {
+				if (msg == 'OK') {
+					$("#errormessage").hide();
+					$("#sendmessage").css("color", "green");
+					$('#sendmessage').html("Your message is sent. Thank you for contact");
+					$('#contactForm').each(function(){ this.reset(); });
+				} else {
+					$("#sendmessage").hide();
+					$("#errormessage").css("color", "red");
+					$('#errormessage').html(msg);
+				}
+			}
+			})
+			//$('#contactFormButton').removeAttr('disabled');
+		});
+	</script>
+</body>
+
+<!-- Mirrored from testpine.com/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Nov 2021 10:29:05 GMT -->
+</html>
